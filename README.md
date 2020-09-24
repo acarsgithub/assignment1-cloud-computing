@@ -29,21 +29,21 @@ Now, on both VM instances on ChameleonCloud, Apache Kafka needs to be downloaded
 
 At this point Apache Kafka should be downloaded on both instances, but we still need to modify the server.proprties files to the correct specifications:
 
-For the VM that you intend to run zookeeper on:
-* set unique broker id (0)
-* uncomment listeners, advertised listeners, and listener security protocol map lines
-* listeners line should be: 
-  * PLAINTEXT://:9092
-* advertised listeners line should be:
-  * PLAINTEXT://<floating-point-ip-address-of-current-instance>:9092
-* listener security protocol map should be left on default
+ **For the VM that you intend to run zookeeper on:**
+ * set unique broker id (0)
+ * uncomment listeners, advertised listeners, and listener security protocol map lines
+ * listeners line should be: 
+   * PLAINTEXT://:9092
+ * advertised listeners line should be:
+   * PLAINTEXT://<floating-point-ip-address-of-current-instance>:9092
+ * listener security protocol map should be left on default
 
-For the second VM instance not running zookeeper:
-* set unique broker id (1)
-* uncomment listeners, advertised listeners, and listener security protocol map lines
-* listeners line should be: 
-  * PLAINTEXT://:9092
-* advertised listeners line should be:
-  * PLAINTEXT://<floating-point-ip-address-of-current-instance>:9092
-* listener security protocol map should be left on default
+ **For the second VM instance not running zookeeper:**
+ * set unique broker id (1)
+ * uncomment listeners, advertised listeners, and listener security protocol map lines
+ * listeners line should be: 
+   * PLAINTEXT://:9092
+ * advertised listeners line should be:
+   * PLAINTEXT://<floating-point-ip-address-of-current-instance>:9092
+ * listener security protocol map should be left on default
 
