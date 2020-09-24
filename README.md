@@ -60,19 +60,19 @@ After these steps have been completed, Apache Kafka and the server.properties fi
 To start off, make sure you cd into the kafka folder from the binary download you made earlier...
 Additionally, ensure that you download and install python3, couchdb library for python, kafka-python library, and couchdb itself
 
-On VM instance with broker id 0, start zookeeper with the following commmand:
+**On VM instance with broker id 0, start zookeeper with the following commmand:**
 * bin/zookeeper-server-start.sh config/zookeeper.properties
 
-Next, on VM instance with broker id 1, run the following to start kafka server:
+**Next, on VM instance with broker id 1, run the following to start kafka server:**
 * bin/kafka-server-start.sh config/server.properties
 
-Next, on VM instance with broker id 0, start kafka server:
+**Next, on VM instance with broker id 0, start kafka server:**
 * bin/kafka-server-start.sh config/server.properties
 
-Next on VM instance with broker id 0, create topic:
+**Next on VM instance with broker id 0, create topic:**
 * bin/kafka-topics.sh --create --topic utilizations --bootstrap-server [floating-point-ip-address-of-current-instance]:9092
 
-Viewing topic properties on kafka servers:
+**Viewing topic properties on kafka servers:**
 * bin/kafka-topics.sh --describe --topic utilizations --bootstrap-server [floating-point-ip-address-of-either-instance]:9092 
 * topic should be created successfully after this
 
