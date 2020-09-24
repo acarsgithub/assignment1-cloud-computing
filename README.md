@@ -74,7 +74,6 @@ Additionally, ensure that you download and install python3, couchdb library for 
 
 **Viewing topic properties on kafka servers:**
 * bin/kafka-topics.sh --describe --topic utilizations --bootstrap-server [floating-point-ip-address-of-either-instance]:9092 
-* topic should be created successfully after this
 
 After the above steps have completed, everything should be in order for the final step!
 
@@ -84,7 +83,7 @@ Please refer to the following link to help setup CouchDB on the VM instance that
 
 Once it has been properly installed, a database can be created easily with the proper credentials for the single node instance on CouchDB made from the tutorial above.
 
-At this point, CouchDB should be installed and a database should exist. We can now start the producer and consumer python files, which should send the JSON data automatically to the database as docuemnts.
+At this point, CouchDB should be installed and a database should exist. We can now start the producer and consumer python files, which should send the JSON data automatically to the database as documents.
 
 For the final step, have the producer file on another local laptop or VM instance outside of the kafka server/chameleon network. On the Chameleon instance with a broker id of 0, go ahead and transfer the consumer python file over to here and execute the python file. Simultaneously, go ahead and run the producer file on your local VM or Ubuntu. At this point, the JSON formatted data should be logging and storing onto the database.
 
