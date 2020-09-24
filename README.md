@@ -25,7 +25,7 @@ Once this part is setup, you are good to go on the next step!
 Now, on both VM instances on ChameleonCloud, Apache Kafka needs to be downloaded and extracted. Specfically, we are going to use the Scala 2.13 binary version. 
 
 * wget "http://mirror.metrocast.net/apache/kafka/2.6.0/kafka_2.13-2.6.0.tgz" (to download this version)
-* tar -xzvf [downloaded kafka folder from above step] (to extract)
+* tar -xzvf [downloaded kafka folder name from above step] (to extract)
 
 At this point Apache Kafka should be downloaded on both instances, but we still need to modify the server.proprties files to the correct specifications:
 
