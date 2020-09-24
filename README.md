@@ -1,6 +1,6 @@
 # assignment1-cloud-computing
 
-## Directions to proerly execute the producer.py and consumer.py files according to assignment specifications
+## Directions to properly execute the producer.py and consumer.py files according to assignment specifications
 
 ### Part 1: ChameleonCloud Instances and Security Group/UFW Specifications
 There are a few setup steps that need to be completed for the environment to be correct (according to the specifications of the assignment). First, two VM instances need to be created on ChameleonCloud. Once the instances have been created and are up and running, the security groups for those VM instances need to include the port numbers 5984, 9092, and 2181. This is to allow the zookeeper, kafka server, and couchdb access around the firewall that is built around the ChameleonCloud. 
@@ -54,4 +54,36 @@ At this point Apache Kafka should be downloaded on both instances, but we still 
 After these steps have been completed, Apache Kafka and the server.properties files should be good to go!
 
 ### Part 3: Running zookeeper, kafka-servers, and creating topic
+
+##### ssh/PUTTY may be needed to obtain multiple terminals to run multiple programs on an instance simultaneously
+
+To start off, make sure you cd into the kafka folder from the binary download you made earlier...
+Additionally, ensure that you download and install python3, couchdb library for python, kafka-python library, and couchdb itself
+
+On VM instance with broker id 0, start zookeeper with the following commmand:
+* bin/zookeeper-server-start.sh config/zookeeper.properties
+
+Next, on VM instance with broker id 1, run the following to start kafka server:
+* bin/kafka-server-start.sh config/server.properties
+
+Next, on VM instance with broker id 0, start kafka server:
+* bin/kafka-server-start.sh config/server.properties
+
+Next on VM instance with broker id 0, create topic:
+* bin/kafka-topics.sh --create --topic utilizations --bootstrap-server [floating-point-ip-address-of-current-instance]:9092
+
+Viewing topic properties on kafka servers:
+* bin/kafka-topics.sh --describe --topic utilizations --bootstrap-server [floating-point-ip-address-of-either-instance]:9092 
+* topic should be created successfully after this
+
+After the above steps have completed, everything should be in order for the final step!
+
+### Part 4: CouchDB setup and running consumer and producer
+
+
+
+
+
+
+
 
