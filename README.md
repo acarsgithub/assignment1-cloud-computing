@@ -80,8 +80,17 @@ After the above steps have completed, everything should be in order for the fina
 
 ### Part 4: CouchDB setup and running consumer and producer
 
+Please refer to the following link to help setup CouchDB on the VM instance that has broker id 1 (not the zookeeper): https://techexpert.tips/couchdb/couchdb-installation-ubuntu-linux/
 
+Once it has been properly installed, a database can be created easily with the proper credentials for the single node instance on CouchDB made from the tutorial above.
 
+At this point, CouchDB should be installed and a database should exist. We can now start the producer and consumer python files, which should send the JSON data automatically to the database as docuemnts.
+
+For the final step, have the producer file on another local laptop or VM instance outside of the kafka server/chameleon network. On the Chameleon instance with a broker id of 0, go ahead and transfer the consumer python file over to here and execute the python file. Simultaneously, go ahead and run the producer file on your local VM or Ubuntu. At this point, the JSON formatted data should be logging and storing onto the database.
+
+**As a quick disclaimer, ensure that the python files for consumer and producer have the appropriate floating point ip address and database name/couchdb link and credentials for your own purposes**
+
+Congratulations! The process is complete!
 
 
 
