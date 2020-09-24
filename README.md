@@ -38,7 +38,7 @@ At this point Apache Kafka should be downloaded on both instances, but we still 
    * PLAINTEXT://<floating-point-ip-address-of-current-instance>:9092
  * listener security protocol map should be left on default
  * zookeeper.connect line should be:
-   * <floating-point-ip-address-of-current-instance>:2181, <ip-net-address-of-current-instance>:2181, localhost:2181
+   * [floating-point-ip-address-of-current-instance]:2181, [ip-net-address-of-current-instance]:2181, localhost:2181
 
  **For the second VM instance not running zookeeper:**
  * set unique broker id (1)
@@ -49,7 +49,7 @@ At this point Apache Kafka should be downloaded on both instances, but we still 
    * PLAINTEXT://<floating-point-ip-address-of-current-instance>:9092
  * listener security protocol map should be left on default
  * zookeeper.connect line should be:
-   * <floating-point-ip-address-of-the-other-instance>:2181, <ip-net-address-of-the-other-instance>:2181
+   * [floating-point-ip-address-of-the-other-instance]:2181, [ip-net-address-of-the-other-instance]:2181
 
 After these steps have been completed, Apache Kafka and the server.properties files should be good to go!
 
