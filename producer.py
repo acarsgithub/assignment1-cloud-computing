@@ -5,6 +5,8 @@
 #
 # Created: Sept 6, 2020
 #
+# Last modified: September 24, 2020 by Khoa Nguyen and Acar Ary 
+#
 # Purpose:
 #
 #    Demonstrate the use of Kafka Python streaming APIs.
