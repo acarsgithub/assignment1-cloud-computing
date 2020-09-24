@@ -1,2 +1,3 @@
 # assignment1-cloud-computing
-Our repository for the details of assignment 1
+### Directions to run the producer.py and consumer.py files according to assignment specifications
+
